@@ -1,5 +1,6 @@
 /*construcao da base de conhecimento.*/
 /*sexo.*/
+/*fatos*/
 mulher(pam).
 mulher(liz).
 mulher(ann).
@@ -14,9 +15,6 @@ genitor(tom, liz).
 genitor(bob, ann).
 genitor(bob, pat).
 genitor(pat, jim).
-filho(bob, pam).
-filho(bob, tom).
-filho(liz, tom).
-filho(ann, bob).
-filho(pat, bob).
-filho(jim, pat).
+
+/*regras*/
+filho(X, Y) :- genitor(Y, X).
